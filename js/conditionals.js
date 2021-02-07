@@ -22,18 +22,18 @@
      */
     function analyzeColor(colorName) {
         if (colorName === "blue") {
-            console.log("blue is the color of the sky");
+            return "blue is the color of the sky"
         } else if (colorName === "red") {
-            console.log("Strawberries are red.");
+            return "Strawberries are red."
         } else if (colorName === "cyan") {
-            console.log("I don't know anything about cyan");
+            return "I don't know anything about cyan"
         } else {
-            console.log("This is not one of the colors");
+            return "This is not one of the colors"
 
         }
     }
+        console.log(analyzeColor("red"));
 
-    analyzeColor("green");
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -46,8 +46,8 @@
      * Pass the `randomColor` variable to your function and console.log the results.
      * You should see a different message every time you refresh the page
      */
-    analyzeColor(randomColor);
-    console.log(randomColor);
+        console.log(analyzeColor(randomColor));
+    //console.log(randomColor);
 
     /**
      * TODO:
@@ -70,7 +70,7 @@
         }
     }
 
-    colorAnalyze("blue");
+        colorAnalyze("cyan");
     /**
      * TODO:
      * Prompt the user for a color when the page loads, and pass the input from the
@@ -109,8 +109,8 @@
             amountTotal = (amountTotal - (.1 * amountTotal));
             console.log("Your total is $" + amountTotal);
         } else if (luckyNum === 2) {
-            amountTotal = (amountTotal - (.25 * amountTotal));
-            console.log("Your total is $" + amountTotal);
+            return (amountTotal - (.25 * amountTotal));
+            //console.log("Your total is $" + amountTotal);
         } else if (luckyNum === 3) {
             amountTotal = (amountTotal - (.35 * amountTotal));
             console.log("Your total is $" + amountTotal);
@@ -125,7 +125,7 @@
         }
     }
 
-    calculateTotal(8, 100);
+    calculateTotal(3, 100);
     /**
      * TODO:
      * Uncomment the line below to generate a random number between 0 and 6.
@@ -180,7 +180,7 @@
      * Can you refactor your code to use functions?
      * HINT: The way we prompt for a value could be improved
      //  */
-    var confirmed = confirm("Would you like to enter a number");
+   // var confirmed = confirm("Would you like to enter a number");
 //        If(confirmed)
 // {
 //          var numChosen = Number(prompt("What is the number you choose?"));
