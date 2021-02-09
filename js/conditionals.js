@@ -32,7 +32,8 @@
 
         }
     }
-        console.log(analyzeColor("red"));
+
+    console.log(analyzeColor("red"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -46,8 +47,8 @@
      * Pass the `randomColor` variable to your function and console.log the results.
      * You should see a different message every time you refresh the page
      */
-        console.log(analyzeColor(randomColor));
-    //console.log(randomColor);
+     console.log(analyzeColor(randomColor));
+
 
     /**
      * TODO:
@@ -69,8 +70,7 @@
                 break;
         }
     }
-
-        colorAnalyze("cyan");
+    colorAnalyze("cyan");
     /**
      * TODO:
      * Prompt the user for a color when the page loads, and pass the input from the
@@ -104,27 +104,33 @@
     function calculateTotal(luckyNum, amountTotal) {
         var totalAmount;
         if (luckyNum === 0) {
-            console.log("Your total is  $" + amountTotal);
+            totalAmount = amountTotal;
+            console.log("Your total is  $" + totalAmount);
+            return totalAmount;
         } else if (luckyNum === 1) {
-            amountTotal = (amountTotal - (.1 * amountTotal));
-            console.log("Your total is $" + amountTotal);
+            totalAmount = (amountTotal - (.1 * amountTotal));
+            console.log("Your total is $" + totalAmount);
+            return totalAmount;
         } else if (luckyNum === 2) {
-            return (amountTotal - (.25 * amountTotal));
-            //console.log("Your total is $" + amountTotal);
+            totalAmount = (amountTotal - (.25 * amountTotal));
+            console.log("Your total is $" + totalAmount);
+            return totalAmount;
         } else if (luckyNum === 3) {
-            amountTotal = (amountTotal - (.35 * amountTotal));
-            console.log("Your total is $" + amountTotal);
+            totalAmount = (amountTotal - (.35 * amountTotal));
+            console.log("Your total is $" + totalAmount);
+            return totalAmount;
         } else if (luckyNum === 4) {
-            amountTotal = (amountTotal - (.5 * amountTotal));
-            console.log("Your total is $" + amountTotal);
+            totalAmount = (amountTotal - (.5 * amountTotal));
+            console.log("Your total is $" + totalAmount);
+            return totalAmount;
         } else if (luckyNum === 5) {
-            amountTotal = (amountTotal - (1 * amountTotal));
-            console.log("Your total is $" + amountTotal);
+            totalAmount = (amountTotal - (1 * amountTotal));
+            console.log("Your total is $" + totalAmount);
+            return totalAmount;
         } else {
             console.log("You have no discount applied");
         }
     }
-
     calculateTotal(3, 100);
     /**
      * TODO:
@@ -138,32 +144,11 @@
 
     var Bill = parseFloat(prompt("What is your total bill?"));
 
-    function calculateTotal(luckyNum, amountTotal) {
-        var totalAmount;
-        if (luckyNum === 0) {
-            console.log("Your total is  $" + amountTotal);
-            alert("Your Lucky number is " + luckyNum + "and Bill before discount is " + Bill + ", with discount" + amountTotal);
-        } else if (luckyNum === 1) {
-            amountTotal = (amountTotal - (.1 * amountTotal));
-            console.log("Your total is $" + amountTotal);
-        } else if (luckyNum === 2) {
-            amountTotal = (amountTotal - (.25 * amountTotal));
-            console.log("Your total is $" + amountTotal);
-        } else if (luckyNum === 3) {
-            amountTotal = (amountTotal - (.35 * amountTotal));
-            console.log("Your total is $" + amountTotal);
-        } else if (luckyNum === 4) {
-            amountTotal = (amountTotal - (.5 * amountTotal));
-            console.log("Your total is $" + amountTotal);
-        } else if (luckyNum === 5) {
-            amountTotal = (amountTotal - (1 * amountTotal));
-            console.log("Your total is $" + amountTotal);
-        } else {
-            console.log("You have no discount applied");
-        }
-    }
 
-    calculateTotal(luckyNumber, Bill);
+    var totalAfterDiscount = calculateTotal(luckyNumber, Bill);
+    alert("Your lucky number was " + luckyNumber);
+    alert("Your amount before discount is " + Bill);
+    alert("Your amount after discount is applied is " + totalAfterDiscount);
     /**
      * TODO:
      * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -180,23 +165,48 @@
      * Can you refactor your code to use functions?
      * HINT: The way we prompt for a value could be improved
      //  */
-   // var confirmed = confirm("Would you like to enter a number");
-//        If(confirmed)
-// {
-//          var numChosen = Number(prompt("What is the number you choose?"));
-//          If(confirmed){
-//          if(numChosen % 2 === 0) {
-//              console.log(numChosen + " is even.")
-//          }else {
-//              console.log(numChosen + " is odd.")
-//          }
-//          console.log(return 100 +  numChosen);
-//
-//          isNan(numChosen)
-//
-//
-//
-// }else {
-//
-// }
+
+    var confirmed = confirm("Would you like to enter a number");
+    var numChosen = Number(prompt("What is the number you choose?"));
+    var isANumber = isNaN(numChosen);
+        if(!isANumber) {
+            console.log("This is a number");
+            alert("This is a number");
+
+            if (confirmed) {
+                console.log(confirmed);
+                console.log(isANumber);
+
+                function evenOdd(numChosen) {
+                    if (numChosen % 2 === 0) {
+                        console.log(numChosen + " is even.");
+                        alert(numChosen + " is even.");
+                    } else {
+                        console.log(numChosen + " is odd.")
+                        alert(numChosen + " is odd")
+                    }
+                }
+                evenOdd(numChosen);
+
+                function oneHundredPlus(numChosen) {
+                    console.log(100 + numChosen);
+                    alert(100 + numChosen);
+                }
+                oneHundredPlus(numChosen);
+
+
+                function positiveNegative(numChosen) {
+                    if (numChosen >= 0) {
+                        alert(numChosen + " is a postive number.");
+                    } else {
+                        alert(numChosen + " is a negative number.");
+                    }
+                }
+
+                positiveNegative(numChosen);
+            }
+        }else {
+            alert("This is not a number")
+    }
+
 })();
