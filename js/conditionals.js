@@ -131,7 +131,43 @@
             console.log("You have no discount applied");
         }
     }
+
+
     calculateTotal(3, 100);
+
+    function totalCalculate(luckyNum, amountTotal) {
+        var totalAmount;
+        switch(luckyNum){
+        case 0:
+            totalAmount = amountTotal;
+            console.log("Your total is  $" + totalAmount);
+            return totalAmount;
+            case 1:
+            totalAmount = (amountTotal - (.1 * amountTotal));
+            console.log("Your total is $" + totalAmount);
+            return totalAmount;
+            case 2:
+            totalAmount = (amountTotal - (.25 * amountTotal));
+            console.log("Your total is $" + totalAmount);
+            return totalAmount;
+            case 3:
+            totalAmount = (amountTotal - (.35 * amountTotal));
+            console.log("Your total is $" + totalAmount);
+            return totalAmount;
+            case 4:
+            totalAmount = (amountTotal - (.5 * amountTotal));
+            console.log("Your total is $" + totalAmount);
+            return totalAmount;
+            case 5:
+            totalAmount = (amountTotal - (1 * amountTotal));
+            console.log("Your total is $" + totalAmount);
+            return totalAmount;
+            default:
+            console.log("You have no discount applied");
+            break;
+        }
+    }
+    totalCalculate(3, 100);
     /**
      * TODO:
      * Uncomment the line below to generate a random number between 0 and 6.
@@ -197,13 +233,19 @@
 
                 function positiveNegative(numChosen) {
                     if (numChosen >= 0) {
-                        alert(numChosen + " is a postive number.");
+                        alert(numChosen + " is a positive number.");
                     } else {
                         alert(numChosen + " is a negative number.");
                     }
                 }
 
                 positiveNegative(numChosen);
+
+                function negativePositive(numChosen) {
+                    (numChosen >= 0)? alert(numChosen + " is a positive number.") : alert(numChosen + " is a negative number.");
+                }
+
+                negativePositive(numChosen);
             }
         }else {
             alert("This is not a number")
