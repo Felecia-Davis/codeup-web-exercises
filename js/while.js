@@ -20,6 +20,10 @@
         console.log(conesRemaining + " cone(s) remaining.");
         if (conesRemaining < numEachCustomer) {
             console.log("Cannot sell you " + numEachCustomer + " cones I only have " + conesRemaining + "...");
+            while(numEachCustomer !== conesRemaining){
+                console.log("This numeber of cones " + numEachCustomer + " is not equal to the cones remaining " + conesRemaining);
+                numEachCustomer = Math.floor(Math.random() * 5) + 1;
+            }
             totalSold = totalSold + conesRemaining;
             console.log("Thank you for buying the " + conesRemaining + " cone(s).")
         } else {
@@ -35,5 +39,6 @@
     // 5 cones sold...  // if there are enough cones
     // Cannot sell you 6 cones I only have 3...  // If there are not enough cones
     // Yay! I sold them all! // If there are no more cones
+
 
 })();

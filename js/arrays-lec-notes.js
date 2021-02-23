@@ -57,7 +57,7 @@ console.log(daysOfTheWeek);
 
 // TODO: create an array of favorite foods and set to a variable called `favoriteFoods` - then console.log the variable
 
-var favoriteFoods = [] = ['fried chicken', 'spaghettic', 'pasta', 'rice and gravy'];
+var favoriteFoods = [] = ['fried chicken', 'spaghetti', 'pasta', 'rice and gravy'];
 console.log(favoriteFoods);
 /* ***************************************************************
 * 					COUNTING AN ARRAY
@@ -144,7 +144,7 @@ console.log(favoriteFoods[2]);
 
 function returnLastElement(lastElement){
     var last = lastElement.length;
-    return last;
+    return lastElement[last - 1];
 }
 console.log(returnLastElement(instructors));
 console.log(returnLastElement(daysOfTheWeek));
@@ -154,13 +154,22 @@ console.log(returnLastElement(daysOfTheWeek));
 *************************************************************** */
 //  TODO TOGETHER: Log each element of the shapes array
 // TODO TOGETHER: Using a for loop, iterate through the shapes array and log each shape
-
+for(var i = 0; i < shapes.length; i++){
+	console.log(shapes[i]);
+}
 
 
 
 // TODO TOGETHER: Alert "that's my favorite shape!" when your favorite shape is iterated over in the loop.
 
-
+// for(var i = 0; i < shapes.length; i++){
+// 	if( shapes[i] === shapes[2]){
+// 		console.log("looping through the shapes array.  We are at" + shapes[i]);
+// 		alert(shapes[i] + " is my favorite shape.");
+// 	}else {
+// 		console.log(shapes[i]);
+// 	}
+// }
 
 // TODO: What happens if we change var i = 1? or var i = 2;
 // TODO: What are benefits of using loops to iterate?
@@ -169,15 +178,26 @@ console.log(returnLastElement(daysOfTheWeek));
 
 // TODO: Using a for loop, iterate through the instructors array and console.log each instructor
 
-
+for(var i = 0; i < instructors.length; i++){
+	console.log(instructors[i]);
+}
 // TODO: Using a for loop, iterate through the daysOfTheWeek array and console.log each day of the week
-
-
+for(var i = 0; i < daysOfTheWeek.length; i++) {
+	console.log(daysOfTheWeek[i]);
+}
 // TODO: Using a for loop, iterate through the favoriteFoods array and console.log each favorite food
 
-
-
+for(var i = 0; i < favoriteFoods.length; i++) {
+	console.log(favoriteFoods[i]);
+}
 // TODO: Refactoring the instructor loop, alert "hey, I know <INSTRUCTOR NAME HERE>" if you have had class with that instructor. If you have not had class with that instructor, alert "I haven't had class with <INSTRUCTOR NAME HERE> yet!"
+for(var i = 0; i < instructors.length; i++){
+	if(instructors[i]  === "douglas" || instructors[i] === "kenneth" || instructors[i] === "samuel"){
+		alert("Hey, I know " + instructors[i]);
+	}else{
+		alert("I haven't had class with " + instructors[i]);
+	}
+}
 
 
 
@@ -188,17 +208,30 @@ console.log(returnLastElement(daysOfTheWeek));
 // TODO TOGETHER: Using a for each loop, console.log each shape from the shapes array
 
 
+shapes.forEach(function(shape){
+	console.log(shape);
+})
 
 // TODO TOGETHER: Using a for each loop, console.log each element from the following array: var pies = ["apple", "cherry", "key lime", "huckleberry"];
-
+var pies = ["apple", "cherry", "key lime", "huckleberry"];
+pies.forEach(function(pie){
+	console.log(pie);
+})
 
 
 // TODO: Using a for each loop, iterate through the instructors array and console.log each instructor
-
+instructors.forEach(function(instructor){
+	console.log(instructor);
+})
 
 
 // TODO: Using a for each loop, iterate through the daysOfTheWeek array and console.log each day of the week
 
-
+daysOfTheWeek.forEach(function(days){
+	console.log(days);
+})
 
 // TODO: Using a for each loop, iterate through the favoriteFoods array and console.log each favorite food
+favoriteFoods.forEach(function(favorite){
+	console.log(favorite);
+})
