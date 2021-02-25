@@ -24,7 +24,6 @@
     for(var a = 1; a <= 9; a++){
         var c = "";
         for(var b= 0; b < a; b++){
-            // var c = "";
              c = c + a;
         }
     console.log(c);

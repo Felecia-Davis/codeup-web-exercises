@@ -72,6 +72,16 @@
         i++
     }
 
+    //To sort from lowest to higest on an array of numbers. The
+    //function keeps the .sort method from comparing the numbers as a string.
+    // var numbers = [4, 2, 5, 1, 3];
+    // numbers.sort(function(a, b) {
+    //     return a - b;
+    // });
+    // console.log(numbers);
+    // [1, 2, 3, 4, 5]
+
+
     var a = largerNumber[0];
     var b = largerNumber[1];
     var c = largerNumber[2];

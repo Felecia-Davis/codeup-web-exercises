@@ -1,4 +1,4 @@
-(function() {
+// (function() {
     "use strict"
     // Exercise 11
     // Write a function definition for a function named addOne that takes in a number and returns that number plus one
@@ -218,7 +218,7 @@
     // Write a function definition named square that takes in a number and returns the number times itself.
 
     function square(numSquare) {
-        numSquare = numSquare * numSquare;
+        var numSquare = numSquare * numSquare;
         return numSquare;
     }
 
@@ -227,10 +227,64 @@
     // Exercise 30
     // Write a function definition named add that takes in two numbers and returns the sum.
 
-    function add(firstNum, secondNum) {
+    function add (firstNum, secondNum) {
         var sumNum = firstNum + secondNum;
         return sumNum;
     }
 
     add();
-})();
+
+    // Exercise 31
+    // Write a function definition named cube that takes in a number and returns the number times itself, times itself.
+
+    function cube(numCube) {
+        var numCube = numCube * numCube * numCube;
+        return numCube;
+    }
+
+    cube();
+
+    // Exercise 32
+    // Write a function definition named squareRoot that takes in a number and returns the square root of the provided number
+
+    function squareRoot(numSqr) {
+        var numSqr = Math.sqrt(numSqr);
+        return numSqr;
+    }
+    squareRoot();
+
+    // Exercise 33
+    // Write a function definition named subtract that takes in two numbers and returns the first minus the second argument.
+
+    function subtract(firstSubtract, secondSubtract) {
+        var numSubtract = firstSubtract - secondSubtract;
+        return numSubtract;
+    }
+    subtract();
+
+    // Exercise 34
+    // Write a function definition named multiply that takes in two numbers and returns the first times the second argument.
+
+    function multiply(firstmultiply, secondmultiply) {
+    var nummultiply= firstmultiply * secondmultiply;
+    return nummultiply;
+    }
+    multiply();
+
+    // Exercise 35
+    // Write a function definition named divide that takes in two numbers and returns the first argument divided by the
+    // second argument.
+
+    function divide(firstdivide, seconddivide) {
+    var numdivide= firstdivide / seconddivide;
+    return numdivide;
+}
+
+    // Exercise 36
+    // Write a function definition named quotient that takes in two numbers and returns the quotient of dividing the first argument by the second argument.
+
+    function quotient(numquotient1, numquotient2) {
+    var numquotient = (numquotient1 - (numquotient1 % numquotient2))/numquotient2
+    return numquotient;
+}
+// })();
