@@ -132,29 +132,31 @@ function lastThree(array){
 
 // ============================= Reversing
 
-// var pies = [
-//     "apple",
-//     "cherry",
-//     "key lime",
-//     "huckleberry",
-//     "rhubarb",
-//     "key lime"
-// ];
-//
-// pies.reverse();
+var pies = [
+    "apple",
+    "cherry",
+    "key lime",
+    "huckleberry",
+    "rhubarb",
+    "key lime"
+];
+
+pies.reverse();
 
 
 // ============================= Sorting
 
 // sort an array in alphabetical order
 
-// pies.sort();
+pies.sort();
 
 // sort in chronological order
 
-// var numbers = [1, 2, 11, 3, 4];
-// numbers.sort();
-// console.log(numbers); // wat?
+var numbers = [1, 2, 11, 3, 4];
+numbers.sort(function(a, b){
+    return a - b;
+});
+console.log(numbers); // wat?
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
@@ -165,9 +167,8 @@ function lastThree(array){
 
 var names = "Bob Sally Mary";
 
-var namesArr = names.split(" ");
+//var namesArr = names.split(" ");
 
-console.log
 // var namesString = namesArr.join("");
 //
 // console.log(namesString);
@@ -181,6 +182,9 @@ console.log
 // var bondsArray = ["Connery", "Lazenby", "Moore", "Dalton", "Brosnan", "Craig"];
 // var bondsString = bondsArray.join("_");
 
+var everyCharacter = names.split("");
+console.log(everyCharacter);
+console.log(everyCharacter.reverse().join(""));
 
 // TODO DEMONSTRATION: Create a function that will take in a formatted string of numbers
 //  and return an array of phone numbers without any symbols. Log the output of the returned array.
@@ -194,14 +198,22 @@ console.log
        5125553030
 */
 
-// var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
-//
-// function cleanPhoneNumbers(phoneNums) {
-//
-// }
-//
-// var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
-//
+var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+
+function cleanPhoneNumbers(phoneNums) {
+var output = [];
+var phoneNumbersArray = phoneNums.split("\n");
+console.log(phoneNumbersArray);
+phoneNumbersArray.forEach(function(phoneNum) {
+    var phoneNumArray = phoneNum.split("-");
+    //console.log(phoneNumArray);
+    console.log(output.push(phoneNumArray.join("")));
+    // console.log(output);
+})
+}
+
+var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
+
 // for (var i = 0; i < cleanNumsArr.length; i += 1) {
 //     console.log(cleanNumsArr[i]);
 // }

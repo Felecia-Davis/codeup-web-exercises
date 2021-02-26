@@ -11,10 +11,13 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-        var person = {};
+        var person = {
+            firstName: "Rick",
+            lastName: "Sanchez"
+    };
 
-        person.firstName = "Rick";
-        person.lastName = "Sanchez";
+        // person.firstName = "Rick";
+        // person.lastName = "Sanchez";
 
     console.log(person.firstName);
     console.log(person.lastName);
@@ -115,14 +118,14 @@
     //                 firstName: "Dr.",
     //                 lastName:   "Seuss"
     //             }
-    //         },
-    //         {
-    //             title: "Green Eggs and Ham",
-    //             author: {
-    //                 firstName: "Dr.",
-    //                 lastName: "Seuss"
-    //             }
-    //         }
+       //     },
+       //      {
+       //          title: "Green Eggs and Ham",
+       //          author: {
+       //              firstName: "Dr.",
+       //              lastName: "Seuss"
+       //          }
+       //      }
     // ]
     // console.log(books[0].title);
     // console.log(books[0].author.firstName);
