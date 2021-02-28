@@ -203,20 +203,23 @@ var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
 function cleanPhoneNumbers(phoneNums) {
 var output = [];
 var phoneNumbersArray = phoneNums.split("\n");
-console.log(phoneNumbersArray);
+//console.log(phoneNumbersArray);
 phoneNumbersArray.forEach(function(phoneNum) {
     var phoneNumArray = phoneNum.split("-");
     //console.log(phoneNumArray);
-    console.log(output.push(phoneNumArray.join("")));
+    output.push(phoneNumArray.join(""));
     // console.log(output);
 })
+    return output;
+
 }
+
 
 var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
 
-// for (var i = 0; i < cleanNumsArr.length; i += 1) {
-//     console.log(cleanNumsArr[i]);
-// }
+for (var i = 0; i < cleanNumsArr.length; i += 1) {
+    console.log(cleanNumsArr[i]);
+}
 
 
 

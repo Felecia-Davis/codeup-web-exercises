@@ -24,8 +24,9 @@
      * console.log 'helloMessage' to check your work
      */
     var helloMessage = sayHello("Felecia");
+      console.log(helloMessage);
 
-     /**
+      /**
      * TODO:
      * Store your name as a string in a variable named 'myName', and pass that
      * variable to the 'sayHello' function. You should see the same output in the

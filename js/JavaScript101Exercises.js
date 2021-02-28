@@ -279,6 +279,7 @@
     var numdivide= firstdivide / seconddivide;
     return numdivide;
 }
+    divide();
 
     // Exercise 36
     // Write a function definition named quotient that takes in two numbers and returns the quotient of dividing the first argument by the second argument.
@@ -287,4 +288,166 @@
     var numquotient = (numquotient1 - (numquotient1 % numquotient2))/numquotient2
     return numquotient;
 }
+    quotient();
+
+// Exercise 37
+// Write a function definition named remainder that takes in two numbers and returns the remainder of first argument divided by the second argument.
+    function remainder(numremainder1, numremainder2) {
+    var numremainder = numremainder1 % numremainder2;
+    return numremainder;
+}
+    remainder();
+
+
+// Exercise 38
+// Write a function definition named sumOfSquares that takes in two numbers, squares each number, then returns the sum of both squares.
+
+    function sumOfSquares(num1Squares, num2Squares) {
+        var num1Squares = num1Squares * num1Squares;
+        var num2Squares = num2Squares * num2Squares;
+        var sumSquares = num1Squares + num2Squares;
+        return sumSquares;
+    }
+
+    sumOfSquares();
+// Exercise 39
+// Write a function definition named timesTwoPlusThree that takes in a number, multiplies it by two, adds 3 and returns the result.
+
+    function timesTwoPlusThree(numtimesTwoPlusThree) {
+    numtimesTwoPlusThree = (numtimesTwoPlusThree * 2) + 3;
+    return numtimesTwoPlusThree;
+}
+    timesTwoPlusThree();
+
+// Exercise 40
+// Write a function definition named areaOfRectangle that takes in two numbers and returns the product.
+
+    function areaOfRectangle(num1AOR, num2AOR) {
+    var numAOR = num1AOR * num2AOR
+    return numAOR;
+}
+    areaOfRectangle();
+
+// Exercise 41
+// Write a function definition named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle
+
+    function areaOfCircle(numAreaOfCirc) {
+    numAreaOfCirc = numAreaOfCirc * numAreaOfCirc * Math.PI;
+    return numAreaOfCirc;
+}
+
+    areaOfCircle();
+
+// Exercise 42
+// Write a function definition named circumference that takes in a number representing a circle's radius and returns the circumference.
+
+    function circumference(numcircum) {
+    numcircum = 2 * numcircum * Math.PI;
+    return numcircum;
+}
+
+    circumference();
+
+// Exercise 43
+// Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
+
+    function isVowel(vowel){
+    if(vowel == "a" || vowel == "e" || vowel == "i" || vowel == "o" || vowel == "u" || vowel == "A" || vowel == "E" || vowel == "I" || vowel == "O" || vowel == "U") {
+        return true;
+    }else {return false;}
+}
+    isVowel();
+// Exercise 44
+// Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
+
+    function hasVowels(string){
+    var strLow = string.toLowerCase();
+    var counter = 0;
+    for (var n = 0; n < strLow.length; n++){
+        if(strLow[n] === "a" || strLow[n] ==="e" || strLow[n] === "i" || strLow[n] === "o" ||  strLow[n]=== "u") {
+            counter++;
+        }
+    }
+    if(counter > 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+    hasVowels();
+
+// Exercise 45
+// Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
+
+    function countVowels(string){
+    var strLow = string.toLowerCase();
+    var counter = 0;
+    for (var n = 0; n < strLow.length; n++){
+        if(strLow[n] === "a" || strLow[n] ==="e" || strLow[n] === "i" || strLow[n] === "o" ||  strLow[n]=== "u") {
+            counter++;
+        }
+    }
+    if(counter > 0){
+        return counter;
+    } else {
+        return 0;
+    }
+}
+    countVowels();
+
+// Exercise 46
+// Write a function definition named removeVowels that takes in string and returns the string without any vowels
+
+function removeVowels(string) {
+    return string.replace (/[aeiou]/gi,'');
+}
+    removeVowels();
+
+
+// Exercise 47
+// Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
+
+    function startsWithVowel(str) {
+    var fstLetter = str.charAt(0).toLowerCase();
+    if (fstLetter === 'a' || fstLetter === 'e' || fstLetter === 'i' || fstLetter === 'o' || fstLetter === 'u'){
+        return true;
+    }
+    return false;
+}
+    startsWithVowel();
+
+// Exercise 48
+// Write a function definition named endsWithVowel that takes in string and true if the string ends with a vowel
+
+    function endsWithVowel(str){
+    var lstLetter = str[str.length - 1];
+    if(lstLetter === 'a' || lstLetter === 'e' || lstLetter === 'i' || lstLetter === 'o' || lstLetter === 'u') {
+        return true;
+    }
+    return false;
+}
+    endsWithVowel();
+
+// Exercise 49
+// Write a function definition named startsAndEndsWithVowel that takes in string and returns true if the string starts and ends with a vowel
+
+    function startsAndEndsWithVowel(str){
+    var fstLetter = str.charAt(0).toLowerCase();
+    var lstLetter = str[str.length - 1];
+    if((fstLetter === 'a' || fstLetter === 'e' || fstLetter === 'i' || fstLetter === 'o' || fstLetter === 'u') &&
+        (lstLetter === 'a' || lstLetter === 'e' || lstLetter === 'i' || lstLetter === 'o' || lstLetter === 'u')) {
+        return true;
+    }
+    return false;
+}
+    startsAndEndsWithVowel();
+
+/ Exercise 50
+// Write a function definition named first that takes in sequence and returns the first value of that sequence.
+
+    function first(firstValue){
+    return firstValue[0];
+}
+    first();
+
 // })();
