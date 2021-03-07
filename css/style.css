@@ -1,0 +1,23 @@
+
+.fancy-header {
+    color: purple;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1,h2,h4 {
+    color:purple;
+    text-decoration: underline;
+}
+
+/*body {*/
+/*    background-color: antiquewhite;*/
+/*}*/
+
+body{
+    background-image: url("../Images/LotsOfRoses.jpg");
+    background-size: cover;
+}
