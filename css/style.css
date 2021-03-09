@@ -18,6 +18,43 @@ h1,h2,h4 {
 /*}*/
 
 body{
-    background-image: url("../Images/LotsOfRoses.jpg");
+    background-color: antiquewhite;
+    background-image: url("../Images/WaveImage.jpg");
     background-size: cover;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+/* unvisited link (:link) */
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
+}
+
+ol {
+    list-style: upper-alpha;
+}
+ul {
+    list-style: square;
+}
+table {
+    /*border-collapse: collapse;*/
+    width: 50%;
+}
+tr,th{
+    padding: 20px;
+    text-align: center;
 }
