@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relative Positioning</title>
+    <style>
+        #container {
+            margin: 50px auto;
+            width: 500px;
+            border: 1px solid #000;
+        }
+        #container2 {
+            margin: 20px auto;
+            width: 500px;
+            border: 1px solid #000;
+        }
+        .box1 {
+            background-color: #77AF00; /*greenish*/
+            height: 100px;
+            width: 100px;
+            /*position: relative;*/
+            margin: 10px;
+            float: left;
+
+        }
+                 .box2 {
+            background-color: #1969B2;/*bluish*/
+            height: 150px;
+            width: 150px;
+            /*position: relative;*/
+            margin: 10px;
+            float: right;
+        }
+
+        #box3{
+            background-color: #1969B2;/*bluish*/
+            height: 100px;
+            width: 100px;
+            /*position: relative;*/
+            margin: 10px;
+            position:relative;
+            /*top: 50px;*/
+            /*left: 50px;*/
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, blanditiis cumque deserunt, dolor necessitatibus perferendis praesentium quas quisquam, quo quos repellat reprehenderit repudiandae similique sunt ullam? Exercitationem rem rerum velit?
+</p>
+
+</div>
+<div id="container2">
+    <div id="box3></div>
+
+</div>
+</body>
+</html>
