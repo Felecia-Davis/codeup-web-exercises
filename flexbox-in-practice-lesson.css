@@ -1,8 +1,8 @@
-body {
-    margin: 0;
-    font-family: Roboto;
-    background: orange;
-}
+/*body {*/
+/*    margin: 0;*/
+/*    font-family: Roboto;*/
+/*    background: orange;*/
+/*}*/
 h1, h2, h3 {
     padding: 0;
     margin: 0;
@@ -21,6 +21,12 @@ hr {
     background: white;
     width: 250px;
     height: 350px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+    /*border: 1px solid crimson;*/
+
 }
 img {
     border-radius: 120px;
@@ -33,6 +39,23 @@ i {
     position: relative;
     bottom: 1.5em;
 }
-.icons i {
-    font-size: 2.2em;
+.icons {
+    display: flex;
+    width: 55%;
+    justify-content: space-evenly;
 }
+    .icons i {font-size: 2.2em;
+}
+    .boundary{
+        background-color: cadetblue;
+        height: 100vh;
+    display:flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        padding-top: 2em;
+
+}
+    .padding-boundary{
+        background-color: #0d5353;
+        padding: 0 7em 0 7em;
+    }
