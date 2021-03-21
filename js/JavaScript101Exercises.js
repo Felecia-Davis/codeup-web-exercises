@@ -442,12 +442,54 @@ function removeVowels(string) {
 }
     startsAndEndsWithVowel();
 
-/ Exercise 50
+// Exercise 50
 // Write a function definition named first that takes in sequence and returns the first value of that sequence.
 
     function first(firstValue){
     return firstValue[0];
 }
     first();
+
+// Exercise 51
+// Write a function definition named second that takes in sequence and returns the second value of that sequence.
+
+function second(secondValue){
+    return secondValue[1];
+}
+second();
+
+// Exercise 52
+// Write a function definition named third that takes in sequence and returns the third value of that sequence.
+function third(thirdValue){
+    return thirdValue[2];
+}
+
+third();
+
+// Exercise 53
+// Write a function definition named forth that takes in sequence and returns the forth value of that sequence.
+function forth(fourthValue){
+    return fourthValue[3];
+}
+
+forth();
+
+// Exercise 54
+// Write a function definition named last that takes in sequence and returns the last value of that sequence.
+function last(lastValue){
+    var indexLast = lastValue.length - 1;
+    return lastValue[indexLast];
+}
+
+last();
+
+// Exercise 55
+// Write a function definition named secondToLast that takes in sequence and returns the second to last value of that sequence.
+
+function secondToLast(secondLast){
+    var indexLast =  secondLast.length - 2;
+    return secondLast[indexLast];
+}
+secondToLast();
 
 // })();
