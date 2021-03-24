@@ -1,0 +1,11 @@
+header{
+    background-image: url("../Images/pizza.png");
+    /*width: 100%;*/
+
+
+}
+
+header h1{
+    opacity:.7;
+    font-weight: 400;
+}
