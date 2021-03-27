@@ -19,13 +19,19 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
+/*header {*/
+/*    background-image: url("https://picsum.photos/1200/300");*/
+/*    background-size: cover;*/
+/*    min-height: 300px;*/
+/*    padding-top: 275px;*/
+/*}*/
+
 header {
-    background-image: url("https://picsum.photos/1200/300");
+    /*background-image: url("https://picsum.photos/1200/300");*/
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
 }
-
 a {
     color: var(--link-color);
 }
@@ -63,65 +69,77 @@ a {
 .container{
     /*padding-top: 2em;*/
     margin-top: 2em;
+    display:flex;
 }
 
 .profile {
     background: var(--light-bg);
     height: 80px;
 }
-.profile-details{
-    float: left;
-    width: calc(25% - 1em);
-    margin: 0 .5em;
 
+
+
+.profile-image {
+    justify-content: center;
+    /*position:absolute;*/
+    top: 14.5em;
+    margin-right: auto;
+    margin-left:auto;
+    right:
 }
-.profile-items{
-    list-style: none;
-    padding: 0;
+/*.profile-details{*/
+/*    float: left;*/
+/*    width: calc(25% - 1em);*/
+/*    margin: 0 .5em;*/
 
-}
+/*}*/
+/*.profile-items{*/
+/*    list-style: none;*/
+/*    padding: 0;*/
 
-.profile-entry{
-    margin: .5em;
-}
+/*}*/
 
-.timeline{
-    float:left;
-    width: calc(50% - 1em);
-    margin: 0 .5em;
-}
+/*.profile-entry{*/
+/*    margin: .5em;*/
+/*}*/
 
-.who-to-follow{
-    float: left;
-    width: calc(25% - 1em);
-    margin: 0 .5em;
-}
+/*.timeline{*/
+/*    float:left;*/
+/*    width: calc(50% - 1em);*/
+/*    margin: 0 .5em;*/
+/*}*/
 
-.profile-image{
-    position:absolute;
-    top: 15em;
-    /*top: 225px;*/
-}
+/*.who-to-follow{*/
+/*    float: left;*/
+/*    width: calc(25% - 1em);*/
+/*    margin: 0 .5em;*/
+/*}*/
 
-.profile-form{
-    float: right;
-    line-height: 80px;
-}
+/*.profile-image{*/
+/*    position:absolute;*/
+/*    top: 15em;*/
+/*    !*top: 225px;*!*/
+/*}*/
+
+/*.profile-form{*/
+/*    float: right;*/
+/*    line-height: 80px;*/
+/*}*/
 
 
-.btn {
-    border: 1px solid var(--main-link-color);
-    color: var(--main-link-color);
-    background: var(--light-bg);
-    font-weight: bold;
-    padding: 8px;
-    border-radius: 5px;
-}
+/*.btn {*/
+/*    border: 1px solid var(--main-link-color);*/
+/*    color: var(--main-link-color);*/
+/*    background: var(--light-bg);*/
+/*    font-weight: bold;*/
+/*    padding: 8px;*/
+/*    border-radius: 5px;*/
+/*}*/
 
-.btn-large {
-    font-size: 1.3em;
-    padding: 10px;
-}
+/*.btn-large {*/
+/*    font-size: 1.3em;*/
+/*    padding: 10px;*/
+/*}*/
 
 .img-circle {
     border-radius: 100%;
