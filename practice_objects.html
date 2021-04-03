@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice_Objects</title>
+</head>
+<body>
+<script>
+"use script"
+<!-- Write a function named printRecipe that accepts a recipe object. A recipe object will have properties of title (a string), servings (a number), and ingredients (an array of strings). printRecipe will console.log each property in this format:-->
+<!--Example object:-->
+<!--var caldoRecipe = {name: "Caldo con Pollo", servings: 4, ingredients: ["whole chicken", "carrots", "cabbage", "potatoes", "jalapeno", "cilantro", "salt", "pepper", "cumin", "onion powder", "garlic powder"]}-->
+<!--Expected look in console from running printRecipe(caldoRecipe):-->
+<!--Caldo con Pollo-->
+<!--Serves: 4-->
+<!--Required ingredients: whole chicken, carrots, cabbage, potatoes, jalapeno, cilantro, salt, pepper, cumin, onion powder, garlic powder-->
+var caldoRecipe = {name: "Caldo con Pollo", servings: 4, ingredients: ["whole chicken", "carrots", "cabbage", "potatoes", "jalapeno", "cilantro", "salt", "pepper", "cumin", "onion powder", "garlic powder"]}
+function printRecipe(recipeObject){
+    console.log(recipeObject.name);
+    console.log(recipeObject.servings);
+    console.log(recipeObject.ingredients);
+    return recipeObject;
+}
+
+// Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space characters, and returns an object with properties streetNumber and streetName.
+// convertAddressToObject('8626 Sunny Oaks') // {streetNumber: '8646', streetName: 'Sunny Oaks'}
+// convertAddressToObject('5408 Villa Nueva') // {streetNumber: '5408', streetName: 'Villa Nueva'}
+
+var num = 0;
+var newstr1 = [];
+function convertAddressToObject(strNumName){
+    var newstr = strNumName.split("");
+    for(var i=0;i< newstr.length; i++) {
+        if( newstr[i] === ""){
+            break;
+        }else{
+            newstr1 = newstr1.push(newstr[i]);
+        }
+    } var number =  newstr1;
+    console.log(number);
+
+}
+    </script>
+</body>
+</html>
