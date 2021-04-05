@@ -26,18 +26,25 @@ function printRecipe(recipeObject){
 // convertAddressToObject('8626 Sunny Oaks') // {streetNumber: '8646', streetName: 'Sunny Oaks'}
 // convertAddressToObject('5408 Villa Nueva') // {streetNumber: '5408', streetName: 'Villa Nueva'}
 
-var num = 0;
-var newstr1 = [];
+
 function convertAddressToObject(strNumName){
-    var newstr = strNumName.split("");
-    for(var i=0;i< newstr.length; i++) {
-        if( newstr[i] === ""){
-            break;
-        }else{
-            newstr1 = newstr1.push(newstr[i]);
-        }
-    } var number =  newstr1;
-    console.log(number);
+    var newstr = strNumName.split(" ");
+    return {number: newstr[0], address: newstr[1]};
+
+
+    // for(var i=0;i< newstr.length; i++) {
+    //     if (newstr[i] === ""){
+    //         index = i;
+    //         console.log(index);
+    //         break;
+    //     } else {
+    //         console.log(newstr[i])
+    //         //  newstr2 = newstr2.push(newstr[i]);
+    //         // console.log(newstr2)
+    //     }
+    // }
+    // }var number =  newstr1;
+    // console.log(number);
 
 }
     </script>

@@ -379,7 +379,7 @@
 // Exercise 45
 // Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
 
-    function countVowels(string){
+   function countVowels(string){
     var strLow = string.toLowerCase();
     var counter = 0;
     for (var n = 0; n < strLow.length; n++){
