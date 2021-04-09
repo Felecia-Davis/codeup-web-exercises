@@ -26,35 +26,35 @@ $(document).ready(function(){
      * endpoint, then query it for a username...
      */
     var hookbinUrl = 'https://hookb.in/K3Zw6Y7lKVF0zzW3V6me';
-    console.log($.ajax(hookbinUrl));
+    // console.log($.ajax(hookbinUrl));
 
 
     /*
      * TO DO TOGETHER: For this next one, we'll send over some data. Add the
      * following JavaScript Object to your Hookbin AJAX request:
      */
-    $.ajax(hookbinUrl, {
-        method: "POST",
-        data: JSON.stringify(car)
-    })
+    // $.ajax(hookbinUrl, {
+    //     method: "POST",
+    //     data: JSON.stringify(car)
+    // })
 
 
     // Send a get request and query for the username bob.
 
-    $.ajax(hookbinUrl + "?username=bob");
+    //$.ajax(hookbinUrl + "?username=bob");
 
     /*
      * TO DO: Refactor the third example using a GET request object instead of
      * appending a query to the url.
      */
 
-    // $.ajax(hookbinUrl, {
-    //     method: "GET",
-    //     data: {
-    //         username: "bob",
-    //         active: true
-    //     }
-    // })
+        $.ajax(hookbinUrl, {
+            method: "GET",
+            data: {
+                username: "bob",
+                active: true
+            }
+        })
 
     /*********************************************
      *              REQUESTS and RESPONSES
@@ -64,17 +64,18 @@ $(document).ready(function(){
      * TO DO TOGETHER: Now, let's see how we can use AJAX requests to communicate with an
      * API and get data back. Uncomment the line below.
      */
+        var swapiBaseURL = "https://swapi.dev/api/";
+        $.ajax(swapiBaseURL + 'people', {
+            method: "GET",
+            data: {
+                search: "r2"
+            }
+        })
+            // .done(function(data){
+        //     console.log(data);
+        // })
 
-    // var swapiBaseURL = "https://swapi.dev/api/";
-    //
-    // $.ajax(swapiBaseURL + 'people/', {
-    //     method: "GET",
-    //     data: {
-    //         search: "r2"
-    //     }
-    // }).done(function(data){
-    //     console.log(data);
-    // });
+
 
     /*
      * TO DO: Look up the Star Wars API and make a similar request that would
