@@ -22,13 +22,15 @@ $('.navbar-brand').click(function() {
 //.css() - get info about a property or change a property
 
 //TODO: Let's see what the width of our "main-content" class is with .css()
+$('.main-content').css("width");
 
 //TODO Together: Can you help me? I'd like to set my modal's text to have a cool color :)
-
+$('.modal-body').css('color',"red");
 //TODO: Let's make an object for us to use with .css(). .
+var warningRed ={'background-color':'red', 'font-size': "72px"}
 
 //TODO Together: Nice - now, let's test this out by targeting our h1 with this warning background! Next, let's chain a font color after it
-
+$('h1').css(warningRed).css('color', "cornflowerblue");
 //.addClass() ~ .removeClass() ~ .toggleClass()
 
 //TODO: We've used a lot of bootstrap on the page - let's see what we can use .addClass to do in combination with bootstrap. Let's UPPERCASE that h1 with the shiny red background!
