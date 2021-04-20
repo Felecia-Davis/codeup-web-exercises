@@ -59,15 +59,17 @@ console.log(emailArr);
 let expTot = users.reduce(function(userExp,exp) {
     return userExp + exp.yearsOfExperience;
 
-
-
 },0);
 console.log(expTot);
 //Use .reduce to get the longest email from the list of users.
 
 //let longestEmail = users.reduce(function(allEmails,anEmail)
 
-    let longestEmail = users.reduce(function(allEmails, anEmail){ allEmails > anEmail ? allEmails : anEmail}, '');
+    let longestEmail = users.reduce(function(longestEmail,user){
+        if(user.email.length > longestEmail.length){
+        longestEmail = user.email
+    }
+        return longestEmail},"");
     console.log(longestEmail);
 
 //Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
@@ -76,6 +78,9 @@ let allInstructors = users.reduce(function(totInstructors, instructor){
     return totInstructors + instructor.name;
     // return `${totInstructors}  ${instructor.name}`;
 },"");
+
+//Another and more sensible using .map.
+// let mapJoinolution = `${user.map(user=>user.name).join(',')}.`;
 console.log(allInstructors);
 
 
