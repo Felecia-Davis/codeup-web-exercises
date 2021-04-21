@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Exercise</title>
+    <!-- Mapbox CSS -->
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<h1>Mapbox maps</h1>
+<div id="map" style='width: 450px; height: 450px;'></div>
+
+
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!-- Mapbox Geocoder Util Methods -->
+<script src="mapbox-geocoder-utils.js"></script>
+<script src="keys.js"></script>
+<!-- Custom JS -->
+<script>
+
+
+
+    mapboxgl.accessToken = mapboxToken;
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 8,
+        center: [-79.4378, 36.0957]
+    });
+    // map.setZoom(15);
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([  -79.496941, 36.069295])
+        .addTo(map);
+    var ChikfilAPopup = new mapboxgl.Popup()
+        .setHTML("<p>Chik-fil-A Rocks!</p>")
+        .addTo(map)
+
+    marker.setPopup(ChikfilAPopup)
+
+    var theRes = geocode("3102 Garden Rd, Burlington, NC 27215", mapboxToken)
+    console.log(theRes);
+
+</script>
+
+</body>
+</html>
